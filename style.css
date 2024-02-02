@@ -6,6 +6,11 @@ body {
     padding: 20px; /* İçerik Boşluğu */
 }
 
+.logo Facebook {
+            max-width: 75%; /* Resmin en fazla %100 genişlikte olmasını sağlar */
+            height: auto;    /* Yükseklik otomatik olarak ayarlanır */
+        }
+
 h2 {
     text-align: center; /* Başlık Ortala */
 }
