@@ -6,7 +6,7 @@ body {
     padding: 20px; /* İçerik Boşluğu */
 }
 
-.logo Facebook {
+.logoFacebook {
             max-width: 50%; /* Resmin en fazla %100 genişlikte olmasını sağlar */
             height: auto;    /* Yükseklik otomatik olarak ayarlanır */
         }
