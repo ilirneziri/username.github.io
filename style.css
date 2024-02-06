@@ -1,25 +1,31 @@
-body {
-    background-color: #dc143c; /* Visne Çürüğü Rengi */
-    color: #ffffff; /* Beyaz Yazı Rengi */
-    font-family: 'Arial', sans-serif; /* Yazı Tipi */
-    margin: 20px; /* Sayfa Kenar Boşluğu */
-    padding: 20px; /* İçerik Boşluğu */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logoFacebook {
-            max-width: 50%; /* Resmin en fazla %100 genişlikte olmasını sağlar */
-            height: auto;    /* Yükseklik otomatik olarak ayarlanır */
-        }
-
-h2 {
-    text-align: center; /* Başlık Ortala */
+.container {
+    text-align: center;
 }
 
-a {
-    color: #ffffff; /* Link Rengi */
-    text-decoration: none; /* Altçizgiyi Kaldır */
+.logo-container {
+    display: flex;
+    justify-content: center;
 }
 
-a:hover {
-    text-decoration: underline; /* Hover Durumunda Altçizgi Ekleyin */
+.logo-link {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Animasyon için geçiş efekti */
+}
+
+.logo-link:hover {
+    transform: scale(1.1); /* Üzerine gelindiğinde boyutunu büyütme */
+}
+
+.logo {
+    width: 100px; /* Logoların varsayılan genişliği */
+    height: auto; /* Yükseklik otomatik olarak ayarlanır */
 }
