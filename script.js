@@ -2,21 +2,24 @@ document.addEventListener("DOMContentLoaded", function() {
     // Logoları seç
     var logos = document.querySelectorAll(".logo");
 
-    // Her bir logonun tıklanma olayını dinle
+    // Her bir logonun üzerine gelme ve ayrılma olaylarını dinle
     logos.forEach(function(logo) {
-        logo.addEventListener("click", function(event) {
-            // Logoya tiklandiginda animasyonu baslat
-            logo.classList.add("logo-clicked");
+        logo.addEventListener("mouseenter", function(event) {
+            // Logoya üzerine gelindiğinde, logonun altında bulunan linki göster
+            var link = logo.parentNode;
+            link.classList.add("show-link");
+        });
 
-            // Logoya tiklandiginda, linkin acilmasini geciktirerek animasyonun tamamlanmasini bekleyin
-            setTimeout(function() {
-                // Logoya ait olan linkin URL'ini al ve yeni bir sekmede ac
-                var link = logo.parentNode.getAttribute("href");
-                window.open(link, "_blank");
-                
-                // Animasyonu sıfırla
-                logo.classList.remove("logo-clicked");
-            }, 500); // Animasyon süresine göre ayarlayabilirsiniz
+        logo.addEventListener("mouseleave", function(event) {
+            // Logodan çekildiğinde, gösterilen linki gizle
+            var link = logo.parentNode;
+            link.classList.remove("show-link");
+        });
+
+        logo.addEventListener("click", function(event) {
+            // Logoya tiklandiginda, linkin URL'ini al ve yeni bir sekmede ac
+            var linkURL = logo.parentNode.getAttribute("href");
+            window.open(linkURL, "_blank");
         });
     });
 });
