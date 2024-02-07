@@ -32,25 +32,32 @@
     transform: rotate(-45deg) translate(0, -5px);
 }
 
-.container {
-    text-align: center;
+/* Menü Listesi Stilleri */
+.menu {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    top: 60px; /* Hamburger menüden aşağıda görüntülenecek */
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-.logo-container {
-    display: inline-block; /* Logoların yan yana gelmesi için */
-    margin: 0 20px; /* Logolar arasında boşluk */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.logo-link {
-    display: inline-block;
-    transition: transform 0.3s ease;
+.menu ul li {
+    margin-bottom: 10px;
 }
 
-.logo-link:hover {
-    transform: scale(1.1); /* Üzerine gelindiğinde boyutunu büyütme */
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
-.logo {
-    width: 200px; /* Logoların genişliği */
-    height: auto; /* Yükseklik otomatik olarak ayarlanır */
+/* Menü Listesi Görüntülenme Durumu */
+.menu.active {
+    display: block;
 }
