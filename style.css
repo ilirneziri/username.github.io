@@ -1,3 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Logo arası boşluk */
+}
+
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.1); /* Üzerine gelindiğinde boyutunu büyütme */
+}
+
+.logo {
+    width: 200px; /* Logoların genişliği */
+    height: auto; /* Yükseklik otomatik olarak ayarlanır */
+}
+
 /* Hamburger Menü Stilleri */
 .menu-toggle {
     display: flex;
