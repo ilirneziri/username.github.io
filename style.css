@@ -93,3 +93,28 @@ body, html {
 .menu.active {
     display: block;
 }
+
+/* Orta Boyutlu Ekranlar için */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        flex-direction: column; /* Logoları dikey olarak sırala */
+        align-items: center; /* Logoları dikeyde ortala */
+    }
+
+    .logo-link {
+        margin: 10px 0; /* Logolar arası boşluk */
+    }
+
+    .logo {
+        width: 150px; /* Logoların genişliği */
+        height: auto; /* Yükseklik otomatik olarak ayarlanır */
+    }
+}
+
+/* Küçük Ekranlar için */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 100px; /* Logoların genişliği */
+    }
+}
+
