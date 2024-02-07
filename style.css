@@ -1,31 +1,33 @@
-body, html {
-    height: 100%;
-    margin: 0;
+/* Hamburger Menü Stilleri */
+.menu-toggle {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999; /* Diğer içeriğin üstünde olması için */
 }
 
-.container {
-    text-align: center;
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
+/* Hamburger Menü Açık Durumu */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(0, 5px);
 }
 
-.logo-link {
-    margin: 0 10px;
-    display: inline-block;
-    transition: transform 0.3s ease; /* Animasyon için geçiş efekti */
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
 }
 
-.logo-link:hover {
-    transform: scale(1.1); /* Üzerine gelindiğinde boyutunu büyütme */
-}
-
-.logo {
-    width: 100px; /* Logoların varsayılan genişliği */
-    height: auto; /* Yükseklik otomatik olarak ayarlanır */
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -5px);
 }
